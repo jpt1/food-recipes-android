@@ -26,7 +26,7 @@
                 android:layout_width="fill_parent"
                 android:visibility="gone"
                 android:layout_height="wrap_content"
-                android:id="@+id/recipe_detail_image"
+                android:id="@+id/recipe_detail_toolbar_image"
                 android:scaleType="centerCrop"
                 android:adjustViewBounds="true"
                 android:src="@drawable/ic_place_holder"
