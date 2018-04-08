@@ -66,7 +66,7 @@ public class recipeDetailFragment extends Fragment implements OnTaskComplete {
         recipeTitleTextView = (TextView) rootView.findViewById(R.id.recipe_detail_title);
         recipeSourceLTextView = (TextView) rootView.findViewById(R.id.recipe_detail_source);
         recipeIngredientsTextView = (TextView) rootView.findViewById(R.id.recipe_detail_ingredients);
-        recipeImageView = (ImageView) rootView.findViewById(R.id.recipe_detail_image);
+        recipeImageView = (ImageView) getActivity().findViewById(R.id.recipe_detail_image);
         favouriteRecipeButton = (Button) rootView.findViewById(R.id.recipe_detail_button_add_to_favourites);
         favouriteRecipeButton.setEnabled(false);
         favouriteRecipeButton.setOnClickListener(new View.OnClickListener() {
@@ -144,6 +144,7 @@ public class recipeDetailFragment extends Fragment implements OnTaskComplete {
                     ingredientsAsString = ingredientsAsString + "\u2022 " + ingredient + "\n";
                 }
                 favouriteRecipeButton.setVisibility(View.VISIBLE);
+                recipeImageView.setVisibility(View.VISIBLE);
                 Picasso.with(getContext())
                         .load(imageURL)
                         .placeholder(R.drawable.ic_place_holder)
