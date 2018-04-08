@@ -66,7 +66,10 @@ public class recipeDetailFragment extends Fragment implements OnTaskComplete {
         recipeTitleTextView = (TextView) rootView.findViewById(R.id.recipe_detail_title);
         recipeSourceLTextView = (TextView) rootView.findViewById(R.id.recipe_detail_source);
         recipeIngredientsTextView = (TextView) rootView.findViewById(R.id.recipe_detail_ingredients);
-        recipeImageView = (ImageView) getActivity().findViewById(R.id.recipe_detail_image);
+        recipeImageView = (ImageView) getActivity().findViewById(R.id.recipe_detail_toolbar_image);
+        if (recipeImageView == null) {
+            recipeImageView = (ImageView) rootView.findViewById(R.id.recipe_detail_image);
+        }
         favouriteRecipeButton = (Button) rootView.findViewById(R.id.recipe_detail_button_add_to_favourites);
         favouriteRecipeButton.setEnabled(false);
         favouriteRecipeButton.setOnClickListener(new View.OnClickListener() {
